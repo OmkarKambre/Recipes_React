@@ -25,7 +25,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* word-spacing: 100px; */
   display: flex;
   border-radius: 40px;
   font-size: 25px;
@@ -40,5 +39,31 @@
 .a-header{
   word-spacing: 0px;
   margin: 0px;
+  
+}
+
+.m-cards{
+  float: left;
+  margin-left: 10%;
+  padding: 5px;
+}
+
+.s-card{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  margin: 10px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px; 
+  background-color: #f9f9f9; 
+  height: 300px;
+  width: 300px; 
+}
+
+.card-image{
+  height: 150px;
+  width: 300px;
+  border-radius: 10px;
   
 }
