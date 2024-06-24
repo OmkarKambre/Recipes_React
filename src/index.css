@@ -71,21 +71,51 @@ html{
 
 .mcard{
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 2rem;
   text-align: center;
   display: inline-block;
   max-width: 350px;
   padding: 20px;
+  width: 200vw;
+  height: 50vh;
   margin: 40px;
+  cursor: pointer;
   background-color: hsla(0, 0%, 74%, 0.3);
-  box-shadow: 5px 5px 5px hsla(0, 0%, 56%,0.3);
+  box-shadow: 5px 5px 5px hsla(0, 4%, 21%, 0.6);
 }
 
 .mcard .card-image{
   border-radius: 50%;
-  height: auto;
-  max-width: 60%;
+  min-width: 10vw;
+  max-width: 15vw;
+  max-height: 30vh;
+  height: 30vh;
+  min-height: 18vh;
+  width: 15vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+
 }
 
+.mcard h4{
+  color: rgba(46, 43, 43,0.8);
+}
 
+.mcard a{
+  float: left;
+  font-size: 1.3rem;
+}
+
+.mcard .read{
+  font-size: 1.3rem;
+  float: right;
+  padding: 0em;
+  color: grey;
+}
+
+.justify-content-center{
+  position: sticky;
+  cursor: pointer;
+  
+}
 
