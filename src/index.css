@@ -1,69 +1,91 @@
-*{
+/* *{
   margin: 0px;
   box-sizing: border-box;
   padding: 0%;
+} */
+
+html{ 
+  font-size: 100%;
 }
+
+@media(max-width: 1500px){
+  html{
+    font-size: 100%;
+  }
+}
+
+@media(min-width: 400px){
+  html{
+    font-size: 80%;
+  }
+  .nav {
+    font-size: 1.2rem; /* Example of reducing font size for smaller screens */
+    margin: 1rem 5%; /* Adjust margins for smaller screens */
+  }
+
+  .nav h3 {
+    margin: 0 1rem; /* Adjust spacing around headings for smaller screens */
+    float: none;
+    display: block;
+  }
+}
+
 
 .header-container{
   display: flex;
   justify-content: center;
   align-items: center;
   background-color:rgba(0, 0, 222,0.1);
-  height: 150px;
+  height: calc(100vh - 80vh);
 }
 
 .t-header{
-  font-size: 50px;
+  font-size: 3.125rem;
   font-family: 'Times New Roman', Times, serif;
 
 }
 
-.nav{
-  height: 80px;
-  margin-top: 30px;
-  margin-left: 10%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  border-radius: 40px;
-  font-size: 25px;
-  width: 80%;
-  background-color:rgba(120, 120, 120,0.3);
+.justify-content-center{
+  background-color: rgba(79, 76, 76, 0.2);
+  border-radius: 1rem;
+  max-width: 30rem;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .nav h3 {
-  margin: 0 100px;
+  margin: 6.25rem;
+  display: block;
 }
 
 .a-header{
   word-spacing: 0px;
   margin: 0px;
+  display: block;
   
 }
 
-.m-cards{
-  float: left;
-  margin-left: 10%;
-  padding: 5px;
+.custom-nav-dropdown .nav-link {
+  color: black; /* Change text color of the dropdown title */
 }
 
-.s-card{
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; 
-  margin: 10px; 
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px; 
-  background-color: #f9f9f9; 
-  height: 300px;
-  width: 300px; 
-}
-
-.card-image{
-  height: 150px;
-  width: 300px;
+.mcard{
+  border: 1px solid black;
   border-radius: 10px;
-  
+  text-align: center;
+  display: inline-block;
+  max-width: 350px;
+  padding: 20px;
+  margin: 40px;
+  background-color: hsla(0, 0%, 74%, 0.3);
+  box-shadow: 5px 5px 5px hsla(0, 0%, 56%,0.3);
 }
+
+.mcard .card-image{
+  border-radius: 50%;
+  height: auto;
+  max-width: 60%;
+}
+
+
+
