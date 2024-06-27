@@ -16,7 +16,7 @@ function Nav1() {
               menuVariant="dark"
               className="custom-nav-dropdown"
             >
-              <NavDropdown.Item href="#action/3.1">Chinese</NavDropdown.Item>
+              <NavDropdown.Item href="">Chinese</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Thai
               </NavDropdown.Item>

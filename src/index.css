@@ -66,7 +66,7 @@ html{
 }
 
 .custom-nav-dropdown .nav-link {
-  color: black; /* Change text color of the dropdown title */
+  color: black; 
 }
 
 .mcard{
@@ -78,12 +78,16 @@ html{
   padding: 20px;
   width: 200vw;
   height: 50vh;
+  transition: 0.4s;
   margin: 40px;
   cursor: pointer;
   background-color: hsla(0, 0%, 74%, 0.3);
   box-shadow: 5px 5px 5px hsla(0, 4%, 21%, 0.6);
 }
 
+.mcard:hover{
+  transform: scale(1.15);
+}
 .mcard .card-image{
   border-radius: 50%;
   min-width: 10vw;
@@ -117,5 +121,22 @@ html{
   position: sticky;
   cursor: pointer;
   
+}
+
+.like-button {
+  font-size: 1rem;
+  padding: 5px 10px;
+  color:  #585858;
+}
+
+.liked {
+  font-weight: bold;
+  color: #1565c0;
+}
+
+.mcard button{
+  border: none;
+  background-color: aliceblue;
+  font-size: 1.15rem;
 }
 
