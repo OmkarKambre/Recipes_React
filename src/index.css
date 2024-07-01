@@ -78,16 +78,44 @@ html{
   padding: 20px;
   width: 200vw;
   height: 50vh;
-  transition: 0.4s;
   margin: 40px;
   cursor: pointer;
   background-color: hsla(0, 0%, 74%, 0.3);
   box-shadow: 5px 5px 5px hsla(0, 4%, 21%, 0.6);
+  perspective: 1000px;
 }
 
-.mcard:hover{
-  transform: scale(1.15);
+.card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
+
+.mcard:hover .card-inner{
+  transform: rotateY(-180deg);
+}
+
+.card-front, .card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* background: linear-gradient(to bottom right, #ff4b2b, #ff416c);*/
+} 
+
+.card-front{
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card-back{
+  /* background: linear-gradient(to bottom right, #2b32b2, #416cff); */
+  transform: rotateY(180deg);
+  color: #fff;
+}
+
 .mcard .card-image{
   border-radius: 50%;
   min-width: 10vw;
@@ -98,11 +126,10 @@ html{
   width: 15vw;
   background-repeat: no-repeat;
   background-size: contain;
-
 }
 
 .mcard h4{
-  color: rgba(46, 43, 43,0.8);
+  color: rgba(46, 43, 43, 0.8);
 }
 
 .mcard a{
@@ -110,23 +137,32 @@ html{
   font-size: 1.3rem;
 }
 
-.mcard .read{
-  font-size: 1.3rem;
-  float: right;
-  padding: 0em;
-  color: grey;
+.watchnow{
+bottom: 0;
+display: flex;
+flex-direction: column;
+float: left;
+
+
 }
 
-.justify-content-center{
-  position: sticky;
-  cursor: pointer;
-  
+
+.read{
+  font-size: 1.3rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  color: rgba(82, 78, 78, 0.9);
 }
 
 .like-button {
   font-size: 1rem;
   padding: 5px 10px;
-  color:  #585858;
+  color: #585858;
 }
 
 .liked {
@@ -139,4 +175,3 @@ html{
   background-color: aliceblue;
   font-size: 1.15rem;
 }
-
