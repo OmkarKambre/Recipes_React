@@ -5,9 +5,12 @@ import Cards from './Cards';
 import Nav from './Nav1';
 import App from './App';
 import { GrLike } from "react-icons/gr";
+import { BrowserRouter } from "react-router-dom";
 
 
 ReactDOM.render(
-  <App/>,
+  <BrowserRouter>
+  <App/>
+  </BrowserRouter>,
   document.getElementById('root')
 );

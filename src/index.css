@@ -1,9 +1,3 @@
-/* *{
-  margin: 0px;
-  box-sizing: border-box;
-  padding: 0%;
-} */
-
 html{ 
   font-size: 100%;
 }
@@ -21,6 +15,7 @@ html{
   .nav {
     font-size: 1.2rem; /* Example of reducing font size for smaller screens */
     margin: 1rem 5%; /* Adjust margins for smaller screens */
+    
   }
 
   .nav h3 {
@@ -56,6 +51,7 @@ html{
 .nav h3 {
   margin: 6.25rem;
   display: block;
+  
 }
 
 .a-header{
@@ -163,6 +159,7 @@ float: left;
   font-size: 1rem;
   padding: 5px 10px;
   color: #585858;
+  float: right;
 }
 
 .liked {
@@ -174,4 +171,24 @@ float: left;
   border: none;
   background-color: aliceblue;
   font-size: 1.15rem;
+}
+
+
+.footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: #61dafb;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }

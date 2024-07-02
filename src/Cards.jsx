@@ -18,17 +18,17 @@ function Cards(props) {
                         <h1>{props.category}</h1>
                         <h4>{props.rname}</h4>
                         <p></p>
-                        <button
-                            className={"like-button " + (isLike ? "liked" : "")}
-                            onClick={onLikeButtonClick}
-                        >
-                            {"👍"} | {like}
-                        </button>
                     </div>
                     <div className="card-back">
                         <h1 style={{color: "black"}}>Description</h1>
                         <center><p className="read">{props.info}</p></center>
                         <a href={props.link} target="_blank" className="watchnow">Watch Now</a>
+                        <button
+                            className={"like-button " + (isLike ? "liked" : "")}
+                            onClick={onLikeButtonClick}
+                        >
+                            {"👍"} | {like}
+                        </button>   
                     </div>
 
                 </div>

@@ -1,11 +1,17 @@
 import React from 'react';
-import Cards from './Cards';
+import { Route, Routes } from 'react-router-dom';
+import Cards from './Cards'; 
 import Nav from './Nav1';
+import Footer from './Footer';
+import About from './About';
 
 const App = () => (
   <>
+  <Routes>
+    <Route path='/about' element={<About/>}/>
+  </Routes>
     <div className='header-container'>
-      <h1 className='t-header'>Recipes</h1>
+      <h1 className='t-header'>Recipe Realm</h1>
     </div>
 
     <div className='body-project'>
@@ -115,6 +121,7 @@ const App = () => (
           />
         </center>
       </div>
+      <Footer />
     </div>
   </>
 );

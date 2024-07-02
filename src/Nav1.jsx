@@ -2,6 +2,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
+import { Link } from 'react-router-dom';
 
 function Nav1() {
   return (
@@ -25,7 +26,7 @@ function Nav1() {
               <NavDropdown.Item href="#action/3.3">Milkshake</NavDropdown.Item>
             </NavDropdown>
         <Nav.Item>
-          <Nav.Link eventKey="link-2" style={{ color: 'black' }}>About Us</Nav.Link>
+        <Nav.Link as={Link} to="/about" style={{ color: 'black' }}>About Us</Nav.Link>
         </Nav.Item>
       </Nav>
     </>
