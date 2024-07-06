@@ -9,7 +9,7 @@ function Nav1() {
     <>
       <Nav className="justify-content-center" activeKey="/home" >
         <Nav.Item>
-          <Nav.Link href="/home" style={{ color: 'black' }}>Home</Nav.Link>
+          <Link to="/" style={{ color: 'black' }}>Home</Link>
         </Nav.Item>
         <NavDropdown
               id="nav-dropdown-dark-example"
@@ -17,16 +17,16 @@ function Nav1() {
               menuVariant="dark"
               className="custom-nav-dropdown"
             >
-              <NavDropdown.Item href="">Chinese</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <Link to="/chinese"><NavDropdown.Item href="/chinese">Chinese</NavDropdown.Item></Link>
+              <Link to="/thai"><NavDropdown.Item href="thai">
                 Thai
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Indian</NavDropdown.Item>
+              </NavDropdown.Item></Link>
+              <Link to="/indian"><NavDropdown.Item href="#action/3.3">Indian</NavDropdown.Item></Link>
               <NavDropdown.Item href="#action/3.3">Italian</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Milkshake</NavDropdown.Item>
+              <Link to="/milkshake"><NavDropdown.Item href="/milkshake">Milkshake</NavDropdown.Item></Link>
             </NavDropdown>
         <Nav.Item>
-        <Nav.Link as={Link} to="/about" style={{ color: 'black' }}>About Us</Nav.Link>
+        <Link  to="/about" style={{ color: 'black' }}>About Us</Link>
         </Nav.Item>
       </Nav>
     </>
