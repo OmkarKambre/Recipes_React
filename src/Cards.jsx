@@ -15,7 +15,7 @@ function Cards(props) {
                 <div className="card-inner">
                     <div className="card-front">
                         <img className="card-image" src={props.imgsrc} />
-                        <h1>{props.category}</h1>
+                        <h1 className="h1new">{props.category}</h1>
                         <h4>{props.rname}</h4>
                         <p></p>
                     </div>

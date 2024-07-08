@@ -9,6 +9,8 @@ import Indian from './pages/Indian';
 import Thai from './pages/Thai';
 import Chinese from './pages/Chinese';
 import Milkshake from './pages/Milkshake';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
   const router = createBrowserRouter([
