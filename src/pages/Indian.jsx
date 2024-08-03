@@ -1,83 +1,95 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from '../Nav1';
 import BootstrapCarousel from "../BootstrapCarousel";
 import Cards from "../Cards";
+import Buttonvn from "./Buttonvn";
 import Footer from "../Footer";
 
-function Indian(){
-    return(
+function Indian() {
+    const [cardsData, setCardsData] = useState([
+        {
+            imgsrc: "https://www.vegrecipesofindia.com/wp-content/uploads/2013/06/chole-bhature-recipe32-1.jpg",
+            category: "Chole Bhature",
+            rname: "Veg",
+            link: "https://www.youtube.com/watch?v=LxgbGnQ9bPc",
+            info: "Cook Chole: Pressure cook chickpeas with salt until tender. In a pan, add cumin seeds, onions, ginger-garlic paste, tomatoes, and spices. Add chickpeas and simmer for 10 minutes. Make Bhature: Mix flour, yogurt, salt, and water to make a soft dough. Roll into small discs and deep fry until golden brown.",
+            active: true
+        },
+        {
+            imgsrc: "https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/rogan-josh-1645057933.webp",
+            category: "Rogan Josh",
+            rname: "Non-Veg",
+            link: "https://www.youtube.com/watch?v=LxgbGnQ9bPc",
+            info: "In a bowl, mix lamb with yogurt, ginger-garlic paste, and a pinch of salt In a pot add cumin seeds, fennel seeds, and asafoetida. Add onions and cook. Add marinated lamb, tomatoes, turmeric, red chili powder, coriander powder, and salt. Cook for about 45 minutes to 1 hour.Add garam masala and simmer.",
+            active: true
+        },
+        {
+            imgsrc: "https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/palak-paneer-1645057933.webp",
+            category: "Palak Paneer",
+            rname: "Veg",
+            link: "https://www.youtube.com/watch?v=LxgbGnQ9bPc",
+            info: "Cook Base: In a pan, heat oil, add cumin seeds, onions, ginger-garlic paste, and tomatoes. Cook until soft. Add Spinach: Add spinach puree, turmeric, salt, and cook for 5 minutes. Add Paneer: Stir in paneer cubes and cook for another 5 minutes. Sprinkle garam masala.",
+            active: true
+        },
+        {
+            imgsrc: "https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/biryani-1645057933.webp",
+            category: "Biryani",
+            rname: "Non-Veg",
+            link: "https://www.youtube.com/watch?v=LxgbGnQ9bPc",
+            info: "Cook Rice: Boil rice with whole spices.In a large pot, heat oil, fry onions until golden. Add marinated chicken and cook until done.In the same pot, layer half-cooked rice over chicken. Top with fried onions, fresh coriander, mint leaves, and saffron milk. Cover pot with a tight lid and cook on low heat for 20-25 minutes.",
+            active: true
+        },
+        {
+            imgsrc: "https://spicecravings.com/wp-content/uploads/2020/08/Matar-Paneer-1.jpg",
+            category: "Matar Paneer",
+            rname: "Veg",
+            link: "https://www.youtube.com/watch?v=LxgbGnQ9bPc",
+            info: "North Indian dish with paneer and green peas. Cooked in a spiced tomato-based gravy. Garnished with cilantro. Served with naan, roti, or rice. Creamy and savory, perfect for any meal.",
+            active: true
+        },
+        {
+            imgsrc: "https://pipingpotcurry.com/wp-content/uploads/2019/04/Misal-Pav-Instant-Pot-1.jpg",
+            category: "Misal Pav",
+            rname: "Veg",
+            link: "https://www.youtube.com/watch?v=LxgbGnQ9bPc",
+            info: "Spicy Maharashtrian dish with sprouted moth beans. Served with buttered pav (bread roll). Topped with farsan, onions, and cilantro. Garnished with lemon and optional yogurt or sev. Offers a rich, spicy flavor profile.",
+            active: true
+        },
+    ]);
+
+    const showAll = () => {
+        setCardsData(cardsData.map(card => ({ ...card, active: true })));
+        // setCategory("All");
+    };
+
+    const showVeg = () => {
+        setCardsData(cardsData.map(card => ({ ...card, active: card.rname === "Veg" })));
+        // setCategory("Veg");
+    };
+
+    const showNonVeg = () => {
+        setCardsData(cardsData.map(card => ({ ...card, active: card.rname === "Non-Veg" })));
+        // setCategory("Non-Veg");
+    };
+
+    return (
         <>
-        <div>
+            <div>
                 <center><Nav /></center>
             </div>
 
             <BootstrapCarousel img1="https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg?size=626&ext=jpg&ga=GA1.1.2113030492.1720310400&semt=sph" img2="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg" />
 
+            <div style={{ textAlign: 'center', margin: '20px 0' }} >
+                <Buttonvn name="All" handleClick={showAll} />
+                <Buttonvn name="Veg" handleClick={showVeg} />
+                <Buttonvn name="Non-Veg" handleClick={showNonVeg} />
+            </div>
+
             <center>
-                <Cards
-                    imgsrc="https://plus.unsplash.com/premium_photo-1667544654787-cd984212004d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hvY29sYXRlJTIwbWlsa3NoYWtlfGVufDB8fDB8fHww"
-                    category="Hot Chocolate"
-                    rname="Hot"
-                    link="https://www.youtube.com/watch?v=LxgbGnQ9bPc"
-                    info="Ingredients: 2 cups vanilla ice cream, 1 cup milk, 1/4 cup chocolate syrup, whipped cream (optional).
-Add: Place ice cream, milk, and chocolate syrup in a blender.
-Blend: Blend until smooth and creamy.
-Pour: Pour the milkshake into a tall glass."
-                />
-
-                <Cards
-                    imgsrc="https://plus.unsplash.com/premium_photo-1669686982303-7da68cdd4595?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3RyYXdiZXJyeSUyMG1pbGtzaGFrZXxlbnwwfHwwfHx8MA%3D%3D"
-                    category="Strawberry Milkshake"
-                    rname="Cold"
-                    link="https://www.youtube.com/watch?v=LxgbGnQ9bPc"
-                    info="Ingredients: 2 cups vanilla ice cream, 1 cup milk, 1 cup fresh strawberries, whipped cream (optional).
-Add: Place ice cream, milk, and strawberries in a blender.
-Blend: Blend until smooth and creamy.
-Pour: Pour the milkshake into a tall glass."
-                />
-
-                <Cards
-                    imgsrc="https://images.unsplash.com/photo-1641665271888-575e46923776?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JlbyUyMG1pbGtzaGFrZXxlbnwwfHwwfHx8MA%3D%3D"
-                    category="Oreo Milkshake"
-                    rname="Cold"
-                    link="https://www.youtube.com/watch?v=LxgbGnQ9bPc"
-                    info="Ingredients: 2 cups vanilla ice cream, 1 cup milk, 6 Oreo cookies, whipped cream (optional).
-Add: Place ice cream, milk, and Oreo cookies in a blender.
-Blend: Blend until smooth and creamy.
-Pour: Pour the milkshake into a tall glass."
-                />
-
-                <Cards
-                    imgsrc="https://www.justsotasty.com/wp-content/uploads/2016/06/Blueberry-Cheesecake-Milkshake-768x1152.jpg"
-                    category="Blueberry Cheesecake Milkshake"
-                    rname="Cold"
-                    link="https://www.youtube.com/watch?v=LxgbGnQ9bPc"
-                    info="Creamy milkshake made with blueberry cheesecake.
-                  Blended with vanilla ice cream and milk.
-                  Includes chunks of cheesecake and fresh blueberries.
-                  Topped with whipped cream and a graham cracker crumble.
-                  Sweet, rich, and tangy flavor."
-                />
-
-                <Cards
-                    imgsrc="https://images.unsplash.com/photo-1514919224949-507c703a3a88?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyYW1lbCUyMG1pbGtzaGFrZXxlbnwwfHwwfHx8MA%3D%3Dg"
-                    category="Hot Caramel Milkshake"
-                    rname="Hot"
-                    link="https://www.youtube.com/watch?v=LxgbGnQ9bPc"
-                    info="Ingredients: 2 cups vanilla ice cream, 1 cup warm milk, 1/4 cup caramel sauce, whipped cream (optional).
-Add: Place ice cream, warm milk, and caramel sauce in a blender.
-Blend: Blend until smooth and creamy.
-Pour: Pour the milkshake into a tall glass."
-                />
-
-
-                <Cards
-                    imgsrc="http://img.taste.com.au/8PS7KoSF/taste/2016/11/top-10-milkshakes-image-2-64001-1.jpg"
-                    category="Cool Mint"
-                    rname="Cold"
-                    link="https://www.youtube.com/watch?v=LxgbGnQ9bPc"
-                    info="For 2 shakes, drizzle Cottee’s Ice Magic Choc Mint around 2 glasses. Blend 1 drop peppermint essence and 2 drops green food colouring with the Basic Milkshake. Divide between glasses, top with chocolate ice-cream and decorate with Nestlé Aero Peppermint Bubbles and a Mini Corinthian wafer."
-                />
+                {cardsData.map((card, index) => (
+                    card.active ? <Cards key={index} imgsrc={card.imgsrc} category={card.category} rname={card.rname} link={card.link} info={card.info} /> : null
+                ))}
             </center>
             <Footer />
         </>
