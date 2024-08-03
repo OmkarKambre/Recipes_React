@@ -179,12 +179,20 @@ float: left;
 
 
 .footer {
-  background-color: #282c34;
+  background-color: rgba(22, 19, 19, 0.8);
   color: white;
+  height: 10rem;
   text-align: center;
   padding: 1em 0;
   bottom: 0;
+  display: flex;
   width: 100%;
+}
+
+.footer-content{
+  text-align: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .footer a {
@@ -198,6 +206,14 @@ float: left;
 }
 
 .carousel-item{
-  height: 60rem;
+  height: 55rem;
   padding: 1rem;
+}
+
+.but{
+  border-radius: 1rem;
+  height: 3.5rem;
+  width: 6rem;
+  padding: auto;
+  margin: 1rem;
 }

@@ -6,7 +6,7 @@ import Footer from "../Footer";
 import Buttonvn from "./Buttonvn";
 
 function Chinese() {
-    const [category, setCategory] = useState("All");
+    // const [category, setCategory] = useState("All");
     const [cardsData, setCardsData] = useState([
         {
             imgsrc: "https://foodbythegram.com/wp-content/uploads/2021/06/E7F8F704-307B-4BFB-ACC4-0FF4E4DF550F-8109-000001EAF8B08F7D-4.jpg",
@@ -60,17 +60,17 @@ function Chinese() {
 
     const showAll = () => {
         setCardsData(cardsData.map(card => ({ ...card, active: true })));
-        setCategory("All");
+        // setCategory("All");
     };
 
     const showVeg = () => {
         setCardsData(cardsData.map(card => ({ ...card, active: card.rname === "Veg" })));
-        setCategory("Veg");
+        // setCategory("Veg");
     };
 
     const showNonVeg = () => {
         setCardsData(cardsData.map(card => ({ ...card, active: card.rname === "Non-Veg" })));
-        setCategory("Non-Veg");
+        // setCategory("Non-Veg");
     };
 
     return (

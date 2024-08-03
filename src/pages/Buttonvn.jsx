@@ -1,9 +1,10 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 function Buttonvn({ name, handleClick }) {
+    const[Color,setColor] = useState()
     return (
-        <button onClick={handleClick} style={{ margin: '0 10px', padding: '10px 20px' }}>
+        <button className='but' onClick={handleClick}>
             {name}
         </button>
     );

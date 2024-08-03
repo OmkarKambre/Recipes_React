@@ -18,9 +18,9 @@ function Nav1() {
               className="custom-nav-dropdown"
             >
               <Link to="/chinese"><NavDropdown.Item href="/chinese">Chinese</NavDropdown.Item></Link>
-              <Link to="/thai"><NavDropdown.Item href="thai">
+              {/* <Link to="/thai"><NavDropdown.Item href="thai">
                 Thai
-              </NavDropdown.Item></Link>
+              </NavDropdown.Item></Link> */}
               <Link to="/indian"><NavDropdown.Item href="#action/3.3">Indian</NavDropdown.Item></Link>
               <NavDropdown.Item href="#action/3.3">Italian</NavDropdown.Item>
               <Link to="/milkshake"><NavDropdown.Item href="/milkshake">Milkshake</NavDropdown.Item></Link>
