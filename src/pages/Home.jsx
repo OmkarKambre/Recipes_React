@@ -14,6 +14,10 @@ function Home(){
     <div className='body-project'>
       <center><Nav /></center>
 
+      <div className="latest-recipe">
+        <p>Latest Recipes</p>
+      </div>
+
       <div className='card-main'>
         <center>
           <Cards
